@@ -1,0 +1,146 @@
+:root {
+  --main: #04a5ac;
+  --gray: #3a3d46;
+}
+
+.text-main {
+  color: var(--main);
+}
+
+.bg-main {
+  background-color: var(--main);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--gray);
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Proxima Nova";
+  font-weight: regular;
+  src: url("../fonts/ProximaNova-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  font-weight: bold;
+  src: url("../fonts/Proxima\ Nova\ Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Proxima Nova Thin";
+  font-weight: 300;
+  src: url("../fonts/Proxima\ Nova\ Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Proxima Nova Black";
+  font-weight: bolder;
+  src: url("../fonts/Proxima\ Nova\ Black.otf") format("opentype");
+}
+
+/* Top */
+#top {
+  border-bottom: 20px solid var(--gray);
+}
+
+#top * {
+  margin-bottom: 0;
+}
+
+#top a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: grid;
+  place-content: center;
+}
+
+header .container {
+  display: grid;
+  place-content: center;
+  z-index: 5;
+}
+
+header .logo {
+  display: none;
+  align-self: center;
+  max-width: 250px;
+  border-bottom: 25px solid var(--gray);
+}
+
+header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 64px;
+  font-family: "Proxima Nova Bold";
+  text-transform: uppercase;
+  justify-content: center;
+  align-self: center;
+}
+
+#hero {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  background: white;
+  z-index: 1;
+}
+
+#hero::after {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/header_banner.png") center top no-repeat;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  right: 0;
+  width: 100vw;
+  height: 90vh;
+  display: block;
+  z-index: 2;
+}
