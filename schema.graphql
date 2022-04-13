@@ -1,0 +1,19 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  hero(episode: Episode): Character
+  droid(id: ID!): Droid
+}
+
+type Mutation {
+    createReview(episode: Episode, review: Review): String
+}
+
+
+type Character {
+  id: ID
+  name: String
+}
